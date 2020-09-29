@@ -14,7 +14,7 @@ public class Solenya {
 
     //Добавить банку с соленьями
     public void pushCan(Can can) throws ExeptionsFall {
-        if (random >= 2) {
+        if (random <= 2) {
             throw new ExeptionsFall("Выпрямите руки, банки больше нету");
         } else {
             this.cans.add(can);

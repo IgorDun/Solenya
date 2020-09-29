@@ -14,11 +14,16 @@ public class Can {
         this.ingredietns = ingredietns;
     }
 
+    public Can() {
+
+    }
+
     @Override
     public String toString() {
-        return "Can{" +
-                "label='" + label + '\'' +
-                ", ingredietns=" + Arrays.toString(ingredietns) +
-                '}';
+        String str = "\"" + this.label + "\" " + "состав: ";
+        for (Vegetables vegetables: ingredietns){
+            str += vegetables + " ";
+        }
+        return str;
     }
 }
