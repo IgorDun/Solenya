@@ -30,7 +30,12 @@ public class Main
 
         try {
             can = solenya.getCan("Огурцы");
-            System.out.println("Вы достали " + can);
+            if (!can.Null()) {
+                System.out.println("Вы достали " + can);
+            } else {
+                System.out.println("Похоже вы когда-то разбили эту банку");
+            }
+
         } catch (ExeptionsFall e) {
             System.out.println(e.getMessage());
         }

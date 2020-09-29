@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Solenya {
     private List<Can> cans;
-    final int random = new Random().nextInt(100) + 1;
+
 
     public Solenya() {
         this.cans = new ArrayList<>();
@@ -14,6 +14,7 @@ public class Solenya {
 
     //Добавить банку с соленьями
     public void pushCan(Can can) throws ExeptionsFall {
+        int random = new Random().nextInt(100) + 1;
         if (random <= 2) {
             throw new ExeptionsFall("Выпрямите руки, банки больше нету");
         } else {
@@ -25,6 +26,7 @@ public class Solenya {
     public Can getCan(String label) throws ExeptionsFall {
 
         Can can = new Can();
+        int random = new Random().nextInt(100) + 1;
         for (Can c : this.cans) {
             if (label.equals(c.getLabel())) {
                 if (random == 1) {

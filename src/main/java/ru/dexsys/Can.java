@@ -18,6 +18,10 @@ public class Can {
 
     }
 
+    public Boolean Null() {
+        return (this.label == null) && (this.ingredietns == null);
+    }
+
     @Override
     public String toString() {
         String str = "\"" + this.label + "\" " + "состав: ";
